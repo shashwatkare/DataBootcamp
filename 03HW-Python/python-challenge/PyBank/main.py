@@ -24,5 +24,5 @@ outputstring = 'Financial Analysis\n' + \
 
 print (outputstring)
 
-with open(output_fili,'w') as txt_file:
+with open(output_fili, 'w') as txt_file:
   txt_file.write (outputstring)

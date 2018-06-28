@@ -20,11 +20,11 @@ for can_i, can_name in enumerate(candidate_list):
     vote_percentage = 100. * float(candidate_won_vote_list[can_i]) / float(total_num_votes) 
     output += can_name + ': {:.3f}'.format(vote_percentage) + '% (' + str(candidate_won_vote_list[can_i])  + ')\n'
 
-output+= '---------------------------\n' + \
-         'Winner: ' + winner_candidate + '\n' + \
-         '---------------------------' 
+output += '---------------------------\n' + \
+          'Winner: ' + winner_candidate + '\n' + \
+          '---------------------------' 
 
 print (output)
 
-with open(output_fili,'w') as txt_file:
+with open(output_fili, 'w') as txt_file:
     txt_file.write (output)
