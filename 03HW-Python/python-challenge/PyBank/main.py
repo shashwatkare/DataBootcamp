@@ -1,7 +1,8 @@
 import csv
 import pandas as pd
 
-input_fili = '~/Downloads/UCBER201805DATA2-Class-Repository-DATA/02-Homework/03-Python/Solutions/PyBank/Resources/budget_data.csv'
+#input_fili = '~/Downloads/UCBER201805DATA2-Class-Repository-DATA/02-Homework/03-Python/Solutions/PyBank/Resources/budget_data.csv'
+input_fili = '~/UCBERKDATA/GitLab/UCBER201805DATA2-Class-Repo/00-Homework/03-Python/Solutions/PyBank/Resources/budget_data.csv'
 output_fili = 'analysis.txt'
 df = pd.read_csv(input_fili)
 
