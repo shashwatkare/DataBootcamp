@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Data Scraping</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid" style="background:black; color: white; padding-left: 40px; padding-right: 40px;">
+        <div class="jumbortron" style="text-align:center; background: lightgrey; color: black; padding-bottom: 40px; padding-top: 30px;">
+            <h1 style="font-size:4em;"> Mars Data Scraping </h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get update!</a></p>
+        </div>
+
+        <h1 style="text-align:center; margin-bottom: 50px; border-bottom: 1px solid white; padding-bottom: 10px;">Mars Information</h1>
+   
+        <div class="row" style="color:black;">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4> Latest Mars News </h4>
+                    </div>
+                    <div class="panel-body">
+                        <h5 style="color:darkgrey">{{mars.Latest_News_Date}}</h5>
+                        <h4>{{mars.Latest_News_Title}}</h4>
+                        <p>{{mars.Latest_News_Article}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4> Latest Mars Weather </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>{{mars.Mars_Weather}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4> Mars profile </h4>
+                    </div>
+                    <div class="panel-body">
+                        <table>
+                            <thead>
+                                <th>Object</th><th>Mars</th>
+                            </thead>
+                            <tbody>
+                                {% for row in mars.mars_profile_json %}
+                                <tr>
+                                    <td>
+                                        {{ row.Object }}
+                                    </td>
+                                    <td>
+                                        {{ row.Mars }}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 style="text-align:center; margin-bottom: 50px; border-bottom: 1px solid white; padding-bottom: 10px;">Mars Images</h1>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4> Featured Image </h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="{{ mars.Featured_Image_URL }}" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4> Mars Hemispheres </h4>
+                    </div>
+                    <div class="panel-body">
+                        {% for hemi in mars.Mars_Hemisphere %}
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <h6 style="color: black; font-size: 1.5em;">{{ hemi.title }}</h6>
+                                <div class="thumbnail">
+                                    <img src="{{ hemi.img_url }}" class="img-thumbnail">
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
