@@ -110,14 +110,8 @@ submitbtn.on("click", function() {
     // apply filter to data
     event = tableData.filter(function(item) {
         for (var key in filter_criteria) {
-            if (item[key] !== filter_criteria[key] && filter_criteria[key] !== "all") {
-                console.log('here')
-                console.log(filter_criteria[key])
-                console.log(item[key])
-                if (filter_criteria[key] != false) {
-                    console.log('there')
-                    return false
-                }
+            if (filter_criteria[key] && item[key] !== filter_criteria[key] && filter_criteria[key] !== "all") {
+                return false
             }
         }
         return true;
