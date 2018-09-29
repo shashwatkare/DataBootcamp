@@ -99,25 +99,6 @@ def samples(sample):
     return jsonify(data)
 
 
-# @app.rout("/wfreq/<sample>")
-# def wfreq(sample):
-#     sel = [
-#         Samples_Metadata.sample,
-#         Samples_Metadata.WFREQ,
-#     ]
-
-#     results = db.session.query(*sel).filter(Samples_Metadata.sample == sample).all()
-
-#     # Create a dictionary entry for each row of metadata information
-#     wfreq_data = {}
-#     for result in results:
-#         wfreq_data["sample"] = result[0]
-#         wfreq_data["WFREQ"] = result[1]
-
-#     print(wfreq_data)
-#     return jsonify(wfreq_data)
-
-
 
 if __name__ == "__main__":
     app.run()
