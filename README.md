@@ -5,7 +5,7 @@ This repository covers a broad array of technologies including Advanced Excel, P
 
 ## 2. Projects
 |Index <br>(Week)|Project Name|Project Details|
-|---|---|---|
+|----|----|----|
 |1| Excel | Used pivot table to visualize data.|
 |2| Excel VBA scripting | Used VBA scripting to manipulate and visualize data. |
 |3| Python challenge | Used Python to perform basic data analysis. |
