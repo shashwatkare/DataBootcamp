@@ -20,5 +20,5 @@ This repository covers a broad array of technologies including Advanced Excel, P
 |15| Interactive-Visualizations-and-dashboards | __Belly Button Biodiversity__<br> Used Plotly.js to build interactive charts for Belly Button Biodiversity and deployed to Heroku.    |
 |16| D3 | __Data Journalism__<br>Analyzed the current trends shaping people's lives as well as created charts and interactive elements to help readers understand the findings.   |
 |17| Mapping-Web | __Earthquake Visualization__<br>Used Leaflet to visualize earthquakes in the world.   |
-|18| AmericanDream |     |
+|18| AmericanDream | __Pathway to Homeownership__ <br>Website: http://minihome.myqnapcloud.com:5001/<br>Used data including 1. `average 30-year fixed mortgage rate by state`, 2. `state median house listing price` and 3. `occupational employment and wage estimates in May 2017` to visualize house price trends in states with time and estimate required work hours in a month to buy a house in different states. This tasks used `d3.js`, `vue.js`, `plotly.js`, `python`, `flask`, `pandas`, `SQLite`, `HTML`, and `CSS`.      |
 |20| Tableau |    |
